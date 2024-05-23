@@ -1,8 +1,12 @@
-<div class="row">
-  <div class="col-8">
-    <app-map></app-map>
+<div class="row" style="height: 500px;">
+  <div class="col-9">
+    <app-map
+    (coordinatesFired)="onMarkerMovedHandler($event)"></app-map>
   </div>
-  <div class="col-4">
+  <div class="col-3 ml-3">
     <p>Lorem ipsum lorem dixit</p>
+    <app-coords
+      [coords]="coords"
+    ></app-coords>
   </div>
 </div>
